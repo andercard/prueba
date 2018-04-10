@@ -37,7 +37,7 @@
               var text1,text2;
 
               if (date[0] !== null) {
-                text1 = date[0].format('DD') + ' de ' + date[0].format('MM');
+                text1 = date[0].format('DD') + ' de ' + date[0].locale('es').format('MMMM');
               }
 
               else if (date[0] === null && date[1] == null) {
@@ -45,7 +45,7 @@
               }
 
               if (date[1] !== null) {
-                text2 = date[1].format('DD') + ' de ' + date[1].format('MM');
+                text2 = date[1].format('DD') + ' de ' + date[1].locale('es').format('MMMM');
               }
 
               $('.desde').text(text1);
