@@ -79,6 +79,9 @@
               $('.desde').text(text)
               $('.hasta').text(text)
             },
+            click: function(date, context) {
+              console.log($(this).siblings('.pignose-calendar-unit-range-first').css('collor','red'))
+            },
             select: function(date, context) {
               var $element = context.element;
               var $calendar = context.calendar;
@@ -102,8 +105,6 @@
               $('.hasta').text(text2);
             }
         });
-
-        // console.log($('.pignose-calendar-unit-first-active').data('date').attr())
 
       });
     </script>
