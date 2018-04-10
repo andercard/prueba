@@ -73,6 +73,12 @@
               ok: 'OK',
               cancel: 'Cancelar'
             },
+            init: function(context) {
+              let text = (context.dateManager.date.format('DD')) + ' de ' + context.dateManager.date.lang('es').format('MMMM')
+
+              $('.desde').text(text)
+              $('.hasta').text(text)
+            },
             select: function(date, context) {
               var $element = context.element;
               var $calendar = context.calendar;
@@ -88,6 +94,8 @@
 
               if (date[1] !== null) {
                 text2 = date[1].format('DD') + ' de ' + date[1].lang('es').format('MMMM');
+              }else {
+                text2 = date[0].format('DD') + ' de ' + date[0].lang('es').format('MMMM');
               }
 
               $('.desde').text(text1);
