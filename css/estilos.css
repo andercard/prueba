@@ -99,6 +99,22 @@ body {
   box-shadow: none;
   border: none; }
 
+.pignose-calendar .pignose-calendar-unit-first-active.pignose-calendar-unit.pignose-calendar-unit-active a {
+  border-radius: 1.2em 0 0 1.2em;
+  width: 100%;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.pignose-calendar .pignose-calendar-unit-second-active.pignose-calendar-unit.pignose-calendar-unit-active a {
+  border-radius: 0 1.2em 1.2em 0;
+  width: 100%;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-range.pignose-calendar-unit-range-first a,
+.pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-range.pignose-calendar-unit-range-last a {
+  border-radius: 0; }
+
 .pignose-calendar .pignose-calendar-top .pignose-calendar-top-date {
   padding: 10px 0;
   top: 75%;
