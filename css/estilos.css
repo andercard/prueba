@@ -45,9 +45,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+*, body {
+  font-family: 'Lato', sans-serif; }
+
 body {
-  background-color: #F6F9FB;
-  font-family: Lato; }
+  background-color: #F6F9FB; }
 
 .header {
   display: -webkit-box;
@@ -59,9 +61,9 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 40px 0 20px;
   background-color: #fff;
-  margin-bottom: 40px; }
+  margin-bottom: 50px; }
   .header p {
     color: #9019FE;
     font-size: 20px;
@@ -71,24 +73,16 @@ body {
   max-width: 250px; }
 
 .main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
+  padding-bottom: 40px; }
 
 .fecha {
   color: #9019FE;
   font-size: 30px;
-  margin-bottom: 30px; }
+  margin: 0 auto 30px auto;
+  width: 100%;
+  max-width: 220px; }
+  .fecha p {
+    margin-bottom: 5px; }
   .fecha strong {
     font-weight: 700; }
 
@@ -98,11 +92,42 @@ body {
   box-shadow: none;
   border: none; }
 
-.pignose-calendar .pignose-calendar-unit a {
-  color: #C5C5C5; }
+.pignose-calendar .pignose-calendar-top {
+  padding: 20px 0 0px 0;
+  background-color: #fff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none; }
 
-.pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-active a {
-  background-color: #9019FE; }
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-date {
+  padding: 10px 0;
+  top: 75%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: auto; }
+
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-month {
+  margin-bottom: 0;
+  color: #9019FE; }
+
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-year {
+  display: none; }
+
+.pignose-calendar .pignose-calendar-unit a,
+.pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-sat a, .pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-sun a {
+  color: #515151;
+  background-color: #D8D8D8; }
+
+.pignose-calendar .pignose-calendar-header .pignose-calendar-week,
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav .pignose-calendar-top-icon,
+.pignose-calendar .pignose-calendar-header .pignose-calendar-week.pignose-calendar-week-sat, .pignose-calendar .pignose-calendar-header .pignose-calendar-week.pignose-calendar-week-sun {
+  color: #9019FE; }
+
+.pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-active a,
+.pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-range a {
+  background-color: #9019FE;
+  color: #fff; }
 
 .pignose-calendar-top-date {
   background-color: #fff; }

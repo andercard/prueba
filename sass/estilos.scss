@@ -47,24 +47,26 @@ table {
 	border-spacing: 0;
 }
 
+*, body {
+  font-family: 'Lato', sans-serif;
+}
 
 body {
   background-color: #F6F9FB;
-  font-family: Lato;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 40px 0 20px;
   background-color: #fff;
   p {
     color: #9019FE;
     font-size: 20px;
     font-weight: 700;
   }
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .header__logo {
@@ -72,16 +74,18 @@ body {
 }
 
 .main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  padding-bottom: 40px;
 }
 
 .fecha {
   color: #9019FE;
   font-size: 30px;
-  margin-bottom: 30px;
+  margin: 0 auto 30px auto;
+  width: 100%;
+  max-width: 220px;
+  p {
+    margin-bottom: 5px;
+  }
   strong {
     font-weight: 700;
   }
@@ -93,12 +97,45 @@ body {
   border: none;
 }
 
-.pignose-calendar .pignose-calendar-unit a {
-  color: #C5C5C5;
+.pignose-calendar .pignose-calendar-top {
+  padding: 20px 0 0px 0;
+  background-color: #fff;
+  box-shadow: none;
+  border: none;
 }
 
-.pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-active a {
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-date{
+  padding: 10px 0;
+  top: 75%;
+  transform: translateY(-50%);
+  height: auto;
+}
+
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-month {
+  margin-bottom: 0;
+  color: #9019FE;
+}
+
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-year{
+  display: none;
+}
+
+.pignose-calendar .pignose-calendar-unit a,
+.pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-sat a, .pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-sun a {
+  color: #515151;
+  background-color: #D8D8D8;
+}
+
+.pignose-calendar .pignose-calendar-header .pignose-calendar-week,
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav .pignose-calendar-top-icon,
+.pignose-calendar .pignose-calendar-header .pignose-calendar-week.pignose-calendar-week-sat, .pignose-calendar .pignose-calendar-header .pignose-calendar-week.pignose-calendar-week-sun {
+  color: #9019FE;
+}
+
+.pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-active a,
+.pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-range a {
   background-color: #9019FE;
+  color: #fff;
 }
 
 
