@@ -37,7 +37,7 @@
               var text1,text2;
 
               if (date[0] !== null) {
-                  text1 = date[0].format('YYYY-MM-DD');
+                text1 = date[0].format('DD') + ' de ' + date[0].format('MM');
               }
 
               else if (date[0] === null && date[1] == null) {
@@ -45,7 +45,7 @@
               }
 
               if (date[1] !== null) {
-                  text2 = date[1].format('YYYY-MM-DD');
+                text2 = date[1].format('DD') + ' de ' + date[1].format('MM');
               }
 
               $('.desde').text(text1);
