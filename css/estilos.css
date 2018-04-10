@@ -70,21 +70,36 @@ body {
     font-weight: 700; }
 
 .header__logo {
-  max-width: 250px; }
+  max-width: 190px;
+  width: 100%; }
+  @media (min-width: 480px) {
+    .header__logo {
+      max-width: 250px; } }
 
 .main {
-  padding-bottom: 40px; }
+  padding: 0 20px 40px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .fecha {
   color: #9019FE;
   font-size: 30px;
-  margin: 0 auto 30px auto;
-  width: 100%;
-  max-width: 260px; }
+  margin-bottom: 30px; }
   .fecha p {
     margin-bottom: 5px; }
   .fecha strong {
     font-weight: 700; }
+
+.calendario {
+  width: 100%; }
 
 .calendar {
   text-decoration: none; }
@@ -122,7 +137,19 @@ body {
       .pignose-calendar .pignose-calendar-top .pignose-calendar-top-date .pignose-calendar-top-year {
         display: none; }
   .pignose-calendar .pignose-calendar-header {
-    margin-top: 10px; }
+    margin-top: 10px;
+    position: relative; }
+    .pignose-calendar .pignose-calendar-header:after {
+      content: '';
+      height: 1px;
+      width: 85%;
+      left: 50%;
+      bottom: 0;
+      position: absolute;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background-color: #9019FE; }
     .pignose-calendar .pignose-calendar-header .pignose-calendar-week {
       color: #9019FE; }
       .pignose-calendar .pignose-calendar-header .pignose-calendar-week.pignose-calendar-week-sun, .pignose-calendar .pignose-calendar-header .pignose-calendar-week.pignose-calendar-week-sat {
@@ -133,7 +160,8 @@ body {
       height: 2em;
       width: 2em;
       line-height: 2em;
-      color: #9019FE; }
+      color: #515151;
+      background-color: #D8D8D8; }
     .pignose-calendar .pignose-calendar-body .pignose-calendar-row .pignose-calendar-unit.pignose-calendar-unit-active a {
       background-color: #9019FE;
       color: #fff;
