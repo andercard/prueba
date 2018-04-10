@@ -16,8 +16,8 @@
   </header>
   <main class="main">
     <section class="fecha">
-      <p><strong>Del:</strong> 15 Enero </p>
-      <p><strong>Al:</strong> 20 de Enero</p>
+      <p><strong>Del:</strong> <span class="desde"></span> </p>
+      <p><strong>Al:</strong>  <span class="hasta"></span> </p>
     </section>
     <section class="calendario">
       <a href="#" class="calendar"></a>
@@ -32,27 +32,29 @@
             multiple: true,
             lang: 'es',
             select: function(date, context) {
-                /**
-                * @params this Element
-                * @params date moment[]
-                * @params context PignoseCalendarContext
-                * @returns void
-                */
+              var $element = context.element;
+              var $calendar = context.calendar;
+              var text1,text2;
 
-                // This is selected button Element.
-                var $this = $(this);
+              if (date[0] !== null) {
+                  text1 = date[0].format('YYYY-MM-DD');
+              }
 
-                // You can get target element in `context` variable, This element is same `$(this)`.
-                var $element = context.element;
+              else if (date[0] === null && date[1] == null) {
+                  text1 += 'nothing';
+              }
 
-                // You can also get calendar element, It is calendar view DOM.
-                var $calendar = context.calendar;
+              if (date[1] !== null) {
+                  text2 = date[1].format('YYYY-MM-DD');
+              }
 
-                // Selected dates (start date, end date) is passed at first parameter, And this parameters are moment type.
-                // If you unselected date, It will be `null`.
-                console.log(date[0], date[1]);
+              $('.desde').text(text1);
+              $('.hasta').text(text2);
             }
         });
+
+        // console.log($('.pignose-calendar-unit-first-active').data('date').attr())
+
       });
     </script>
 
