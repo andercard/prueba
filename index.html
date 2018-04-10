@@ -31,7 +31,48 @@
       $(function() {
         $('.calendar').pignoseCalendar({
             multiple: true,
-            lang: 'es',
+            format: 'YYYY-MM-DD',
+            weeks: [
+              'D',
+              'L',
+              'M',
+              'M',
+              'J',
+              'V',
+              'S'
+            ],
+            monthLong: [
+              'Enero',
+              'Febrero',
+              'Marzo',
+              'Abril',
+              'Mayo',
+              'Junio',
+              'Julio',
+              'Agosto',
+              'Septiembre',
+              'Octubre',
+              'Noviembre',
+              'Diciembre'
+            ],
+            months: [
+              'Ene',
+              'Feb',
+              'Mar',
+              'Abr',
+              'May',
+              'Jun',
+              'Jul',
+              'Ago',
+              'Sep',
+              'Oct',
+              'Nov',
+              'Dic'
+            ],
+            controls: {
+              ok: 'OK',
+              cancel: 'Cancelar'
+            },
             select: function(date, context) {
               var $element = context.element;
               var $calendar = context.calendar;
